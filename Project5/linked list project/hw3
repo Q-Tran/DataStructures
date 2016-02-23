@@ -1,0 +1,35 @@
+1)a)
+//need to add node constructor
+void add(int arg){ //arguement is the value of the node to be added
+	int thevalue;
+	node current;
+	current = *head;
+	thevalue = current.val;
+	while(arg < thevalue){
+		bnode = current;
+		thevalue = current.next().val;
+		//keep going until arg is larger than this.next();
+	}
+	bnode.next = new node(arg);
+	*(bnode.next).next = current;
+}
+b)
+~SortedLinkedList(){
+	node bnode;
+	node current;
+	
+	bnode = *head;
+	while(bnode.next() != nullptr){
+		current = bnode.next();
+		delete bnode;
+		bnode = current;
+	}
+	delete bnode;
+}
+c)
+SortedLinkedList operator+(SortedLinkedList arg1, SortedLinkedList arg2){
+	node current1 = arg1.head();
+	node current2 = arg2.head();
+
+	current1 + current2
+}
